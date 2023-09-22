@@ -17,4 +17,5 @@ User melakukan berbagai aktivitas dengan menggunakan protokol FTP. Salah satunya
 - Berapakah acknowledge number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
 
 ### Jawaban
-Karena aktivitas menggunakan protocol FTP dan salah satunya adalah mengunggah file maka dapat digunakan filter `ftp.request.command == STOR` dimana STOR menandakan aktivitas untuk mengunggah.
+Karena aktivitas menggunakan protocol FTP dan salah satunya adalah mengunggah file maka dapat digunakan filter `ftp.request.command == STOR` dimana STOR merupakan aktivitas untuk mengunggah suatu file.
+![image](image.png)
