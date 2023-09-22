@@ -117,6 +117,9 @@ Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk men
 
 ![image](src/5flag.png)
 
+### Kendala
+- Agak kebingungan untuk pertama kali, karena pertama kali menghadapi tipe soal seperti ini
+
 ## Nomor 6
 ### Soal
 Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik, Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga. ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan "**server SOURCE ADDRESS 7812 is invalid**". ketika ditelusuri di google, hasil pencarian hanya menampilkan a1 e5 u21. jiwa detektif slamet pun bergejolak. bantulah udin dan slamet untuk menemukan solusi kode error tersebut.
@@ -129,6 +132,9 @@ Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggema
 - sesuai dengan petunjuk soal a1 e5 u21 berarti IP diubah dari bilangan 1-26 yang merupakan angka ke alphabet, sehingga menjadi 10 4 18 14 10 1 = JDRNJA
 
 ![image](src/6flag)
+
+### Kendala
+- Butuh waktu untuk memahami apa yang diminta soal.
 
 ## Nomor 7
 ### Soal
@@ -165,6 +171,9 @@ untuk melakukan filter tersebut memiliki lebih dari satu kemungkinan (variasi &&
 `ip.src == 10.51.40.1 && ip.dst != 10.39.55.34` yang memunculkan flag.
 
 ![image](src/9flag.png)
+
+### Kendala
+- Ada lebih dari 1 kueri yang menampilkan apa yang diminta oleh soal, sehingga harus melakukan trial and error.
 
 ## Nomor 10
 ### Soal
