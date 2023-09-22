@@ -4,7 +4,7 @@ Berikut adalah repository dari kelompok E06 untuk pengerjaan Praktikum Modul 1 J
 # Anggota Kelompok
 | Nama | NRP | 
 | --- | --- |
-| Muhammad Hafidh Rosyadi | 502521013 |
+| Muhammad Hafidh Rosyadi | 5025211013 |
 | Kartika Diva Asmara Gita | 5025211039 |
 
 # Dokumentasi Pengerjaan Soal
@@ -86,21 +86,22 @@ Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk men
 - Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP?
 
 ### Jawaban
-- Dilakukan filter `tcp.stream eq 0` untuk melihat paket tersebut.
-- Selanjutnya klik kanan, follow, dan TCP Stream untuk mencari password.
+- Untuk membuka file zip yang diberikan dibutuhkan password, sehingga perlu untuk mencari password dari satu persatu detail paket yang diberikan.
 
 ![image](src/5a.png)
 
-- Dalam pengecekan TCP stream di dalam paket, ditemukan password yaitu NWltcGxlUGFzNXdvcmQ=
+- klik kanan, follow, dan TCP Stream untuk mencari password.
+
 
 ![image](src/5b.png)
 
-- Decode password dengan base64.
-- Didapatkan password yaitu 5implePas5word untuk mengekstrak zip file.
+- Dalam pengecekan TCP stream di dalam paket, ditemukan password yaitu NWltcGxlUGFzNXdvcmQ= pada paket nomor 3
 
 ![image](src/5c.png)
 
-- Pada zip file terdapat port netcat nc 10.21.78.111 11111 dan sebanyak 60 paket.
+- Decode password dengan base64 sesuai dengan arahan.
+- Didapatkan password yaitu 5implePas5word untuk mengekstrak zip file.
 
 ![image](src/5d.png)
 
+- Pada zip file terdapat port netcat nc 10.21.78.111 11111.
