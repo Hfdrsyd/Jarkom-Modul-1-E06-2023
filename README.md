@@ -104,3 +104,81 @@ Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk men
 
 ![image](src/5d.png)
 
+#### poin 1 (Berapa banyak packet yang berhasil di capture dari file pcap tersebut?)
+
+![image](src/5e.png)
+
+#### poin 2 (Port berapakah pada server yang digunakan untuk service SMTP?)
+
+![image](src/5f.png)
+
+#### poin 3 (Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP?)
+`ip :74.53.140.153`
+
+![image](src/5flag.png)
+
+## Nomor 6
+### Soal
+Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik, Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga. ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan "**server SOURCE ADDRESS 7812 is invalid**". ketika ditelusuri di google, hasil pencarian hanya menampilkan a1 e5 u21. jiwa detektif slamet pun bergejolak. bantulah udin dan slamet untuk menemukan solusi kode error tersebut.
+
+### Jawaban
+
+![image](src/6.png)
+
+- IP pada paket no 7812 adalah `104.18.14.101`.
+- sesuai dengan petunjuk soal a1 e5 u21 berarti IP diubah dari bilangan 1-26 yang merupakan angka ke alphabet, sehingga menjadi 10 4 18 14 10 1 = JDRNJA
+
+![image](src/6flag)
+
+## Nomor 7
+### Soal
+Berapa jumlah packet yang menuju IP 184.87.193.88?
+
+### Jawaban
+Melakukan filter terhadap paket yang menuju ip 184.87.193.88 dengan filter `ip.dst == 184.87.193.88`
+
+![image](src/7.png)
+
+Dapat dilihat displayed sebanyak 6.
+
+![image](src/7flag.png)
+
+## Nomor 8
+### Soal
+Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yang menuju port 80! (Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)
+
+### Jawaban
+Melakukan filter `tcp.dstport == 80 || udp.dstport == 80`
+untuk menampilkan seluruh paket yang menuju port 80 dan secara default terurut.
+
+![image](src/8.png)
+
+![image](src/8flag.png)
+
+
+## Nomor 9
+### Soal
+Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34!
+
+### Jawaban
+untuk melakukan filter tersebut memiliki lebih dari satu kemungkinan (variasi && dan and) namun hanya
+`ip.src == 10.51.40.1 && ip.dst != 10.39.55.34` yang memunculkan flag.
+
+![image](src/9flag.png)
+
+## Nomor 10
+### Soal
+Sebutkan kredensial yang benar ketika user mencoba login menggunakan Telnet
+
+### Jawaban
+dengan filter `telnet` untuk menampilkan seluruh protokol yang menggunakan telnet. 
+
+![image](src/10a.png)
+
+dan dicari yang memiliki format username:password pada tcp streamnya. 
+
+![image](src/10b.png)
+
+dari username dan password yang ada, hanya `dhafin:kesayangannyak0k0`yang memunculkan flag.
+
+![image](src/10flag.png)
