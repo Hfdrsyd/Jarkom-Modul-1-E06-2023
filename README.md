@@ -4,7 +4,7 @@ Berikut adalah repository dari kelompok E06 untuk pengerjaan Praktikum Modul 1 J
 # Anggota Kelompok
 | Nama | NRP | 
 | --- | --- |
-| Muhammad Hafidh Rosyadi | 502521 |
+| Muhammad Hafidh Rosyadi | 502521013 |
 | Kartika Diva Asmara Gita | 5025211039 |
 
 # Dokumentasi Pengerjaan Soal
@@ -22,11 +22,12 @@ User melakukan berbagai aktivitas dengan menggunakan protokol FTP. Salah satunya
 
 ![image](src/1ab.png)
 
-- Selanjutnya klik kanan, follow, dan TCP Stream untuk melihat response dari aktivitas tersebut.
+- Karena Response dari request pasti berdekatan, maka dapat dilakukan filter protocol 'ftp' dan dapat dicari paket setelah paket 147 (paket request). Paket 149 adalah paket setelah 147 dan berisi response, maka itu pasti reponse dari aktivitas mengunggah file.
+- Dapat dilihat nilai sequence number (raw) dan juga acknowledge number (raw) dari paket reponse.
 
 ![image](src/1cd.png)
 
-- Berikut hasil output dan jawaban:
+- Berikut jawaban dan flag:
   
 ![image](src/1flag.png)
 
@@ -43,7 +44,7 @@ Selanjutnya klik kanan, follow, dan TCP Stream untuk melihat web server yang dig
 
 ![image](src/2b.png)
 
-Berikut hasil output dan jawaban:
+Berikut jawaban dan flag:
 
 ![image](src/2flag.png)
 
@@ -55,11 +56,11 @@ Dapin sedang belajar analisis jaringan. Bantulah Dapin untuk mengerjakan soal be
 
 ### Jawaban
 - Dilakukan filter `ip.addr == 239.255.255.250 && (udp.port == 3702 || tcp.port == 3702)` untuk melihat paket ip 239.255.255.250 dan paket dengan port 3702.
-- Pada detail bagian bawah, dapat dilihat bawah terdapat 21 paket dengan protokol layer yang digunakan hanya UDP saja.
 
 ![image](src/3.png)
 
-- Berikut hasil output dan jawaban:
+- Pada detail bagian diatas, dapat dilihat bawah terdapat 21 paket dengan protokol layer yang digunakan hanya UDP saja.
+- Berikut jawaban dan flag:
 
 ![image](src/3flag.png)
 
@@ -73,7 +74,7 @@ Berapa nilai checksum yang didapat dari header pada paket nomor 130?
 ![image](src/4.png)
 
 Didapatkan nilai Checksum adalah 0x18e5.
-Berikut hasil output dan jawaban:
+Berikut jawaban dan flag:
 
 ![image](src/4flag.png)
 
