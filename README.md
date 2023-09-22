@@ -91,17 +91,16 @@ Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk men
 ![image](src/5a.png)
 
 - klik kanan, follow, dan TCP Stream untuk mencari password.
-
-
-![image](src/5b.png)
-
 - Dalam pengecekan TCP stream di dalam paket, ditemukan password yaitu NWltcGxlUGFzNXdvcmQ= pada paket nomor 3
 
-![image](src/5c.png)
+![image](src/5b.png)
 
 - Decode password dengan base64 sesuai dengan arahan.
 - Didapatkan password yaitu 5implePas5word untuk mengekstrak zip file.
 
-![image](src/5d.png)
+![image](src/5c.png)
 
 - Pada zip file terdapat port netcat nc 10.21.78.111 11111.
+
+![image](src/5d.png)
+
