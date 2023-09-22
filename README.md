@@ -17,5 +17,55 @@ User melakukan berbagai aktivitas dengan menggunakan protokol FTP. Salah satunya
 - Berapakah acknowledge number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
 
 ### Jawaban
-Karena aktivitas menggunakan protocol FTP dan salah satunya adalah mengunggah file maka dapat digunakan filter `ftp.request.command == STOR` dimana STOR merupakan aktivitas untuk mengunggah suatu file.
-![image](image.png)
+- Karena aktivitas menggunakan protocol FTP dan salah satunya adalah mengunggah file maka dapat digunakan filter `ftp.request.command == STOR` dimana STOR merupakan aktivitas untuk mengunggah suatu file.
+- Pada bagian Transmission Protocol Control, dapat dilihat nilai sequence number (raw) dan juga acknowledge number (raw).
+![image](src/1ab.png)
+- Selanjutnya klik kanan, follow, dan TCP Stream untuk melihat response dari aktivitas tersebut.
+![image](src/1bc.png)
+- Berikut hasil output dan jawaban:
+![image](src/1flag.png)
+
+## Nomor 2
+### Soal
+Sebutkan web server yang digunakan pada portal praktikum Jaringan Komputer!
+
+### Jawaban
+- Karena ip pada platform jarkom adalah 10.21.78.111, maka dilakukan filter `ip.src == 10.21.78.111` untuk mengambil paket yang berasal dari ip tersebut.
+![image](src/2a.png)
+- Selanjutnya klik kanan, follow, dan TCP Stream untuk melihat web server yang digunakan yaitu gunicorn.
+![image](src/2b.png)
+- Berikut hasil output dan jawaban:
+![image](src/2flag.png)
+
+## Nomor 3
+### Soal
+Dapin sedang belajar analisis jaringan. Bantulah Dapin untuk mengerjakan soal berikut:
+- Berapa banyak paket yang tercapture dengan IP source maupun destination address adalah 239.255.255.250 dengan port 3702?
+- Protokol layer transport apa yang digunakan?
+
+### Jawaban
+- Dilakukan filter `ip.addr == 239.255.255.250 && (udp.port == 3702 || tcp.port == 3702)` untuk melihat paket ip 239.255.255.250 dan paket dengan port 3702.
+- Pada bagian Transmission Protocol Control, dapat dilihat bawah terdapat 21 paket dengan protokol layer yang digunakan hanya UDP saja.
+![image](src/3.png)
+- Berikut hasil output dan jawaban:
+![image](src/3flag.png)
+
+## Nomor 4
+### Soal 
+Berapa nilai checksum yang didapat dari header pada paket nomor 130?
+
+### Jawaban
+- Mencari paket dengan nomor 130, kemudian lihat detail paket pada bagian Transmission Protocol Control.
+![image](src/4.png)
+- Didapatkan nilai Checksum adalah 0x18e5.
+- Berikut hasil output dan jawaban:
+![image](src/4flag.png)
+
+## Nomor 5
+### Soal
+Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk menganalisis file packet capture tersebut.
+- Berapa banyak packet yang berhasil di capture dari file pcap tersebut?
+- Port berapakah pada server yang digunakan untuk service SMTP?
+- Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP?
+
+### Jawaban
