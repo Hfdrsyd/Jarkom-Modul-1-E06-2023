@@ -19,11 +19,16 @@ User melakukan berbagai aktivitas dengan menggunakan protokol FTP. Salah satunya
 ### Jawaban
 - Karena aktivitas menggunakan protocol FTP dan salah satunya adalah mengunggah file maka dapat digunakan filter `ftp.request.command == STOR` dimana STOR merupakan aktivitas untuk mengunggah suatu file.
 - Pada bagian Transmission Protocol Control, dapat dilihat nilai sequence number (raw) dan juga acknowledge number (raw).
-- ![image](src/1ab.png)
+
+![image](src/1ab.png)
+
 - Selanjutnya klik kanan, follow, dan TCP Stream untuk melihat response dari aktivitas tersebut.
-- ![image](src/1bc.png)
+
+![image](src/1cd.png)
+
 - Berikut hasil output dan jawaban:
-- ![image](src/1flag.png)
+  
+![image](src/1flag.png)
 
 ## Nomor 2
 ### Soal
@@ -31,11 +36,16 @@ Sebutkan web server yang digunakan pada portal praktikum Jaringan Komputer!
 
 ### Jawaban
 - Karena ip pada platform jarkom adalah 10.21.78.111, maka dilakukan filter `ip.src == 10.21.78.111` untuk mengambil paket yang berasal dari ip tersebut.
-- ![image](src/2a.png)
-- Selanjutnya klik kanan, follow, dan TCP Stream untuk melihat web server yang digunakan yaitu gunicorn.
-- ![image](src/2b.png)
-- Berikut hasil output dan jawaban:
-- ![image](src/2flag.png)
+  
+![image](src/2a.png)
+
+Selanjutnya klik kanan, follow, dan TCP Stream untuk melihat web server yang digunakan yaitu gunicorn.
+
+![image](src/2b.png)
+
+Berikut hasil output dan jawaban:
+
+![image](src/2flag.png)
 
 ## Nomor 3
 ### Soal
@@ -46,9 +56,12 @@ Dapin sedang belajar analisis jaringan. Bantulah Dapin untuk mengerjakan soal be
 ### Jawaban
 - Dilakukan filter `ip.addr == 239.255.255.250 && (udp.port == 3702 || tcp.port == 3702)` untuk melihat paket ip 239.255.255.250 dan paket dengan port 3702.
 - Pada detail bagian bawah, dapat dilihat bawah terdapat 21 paket dengan protokol layer yang digunakan hanya UDP saja.
-- ![image](src/3.png)
+
+![image](src/3.png)
+
 - Berikut hasil output dan jawaban:
-- ![image](src/3flag.png)
+
+![image](src/3flag.png)
 
 ## Nomor 4
 ### Soal 
@@ -56,10 +69,13 @@ Berapa nilai checksum yang didapat dari header pada paket nomor 130?
 
 ### Jawaban
 - Mencari paket dengan nomor 130, kemudian lihat detail paket pada bagian Transmission Protocol Control.
-- ![image](src/4.png)
-- Didapatkan nilai Checksum adalah 0x18e5.
-- Berikut hasil output dan jawaban:
-- ![image](src/4flag.png)
+
+![image](src/4.png)
+
+Didapatkan nilai Checksum adalah 0x18e5.
+Berikut hasil output dan jawaban:
+
+![image](src/4flag.png)
 
 ## Nomor 5
 ### Soal
@@ -71,12 +87,19 @@ Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk men
 ### Jawaban
 - Dilakukan filter `tcp.stream eq 0` untuk melihat paket tersebut.
 - Selanjutnya klik kanan, follow, dan TCP Stream untuk mencari password.
-- ![image](src/5a.png)
+
+![image](src/5a.png)
+
 - Dalam pengecekan TCP stream di dalam paket, ditemukan password yaitu NWltcGxlUGFzNXdvcmQ=
-- ![image](src/5b.png)
+
+![image](src/5b.png)
+
 - Decode password dengan base64.
 - Didapatkan password yaitu 5implePas5word untuk mengekstrak zip file.
-- ![image](src/5c.png)
+
+![image](src/5c.png)
+
 - Pada zip file terdapat port netcat nc 10.21.78.111 11111 dan sebanyak 60 paket.
-- ![image](src/5d.png)
-- 
+
+![image](src/5d.png)
+
