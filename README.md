@@ -8,3 +8,13 @@ Berikut adalah repository dari kelompok E06 untuk pengerjaan Praktikum Modul 1 J
 | Kartika Diva Asmara Gita | 5025211039 |
 
 # Dokumentasi Pengerjaan Soal
+## Nomor 1
+### Soal
+User melakukan berbagai aktivitas dengan menggunakan protokol FTP. Salah satunya adalah mengunggah suatu file.
+- Berapakah sequence number (raw) pada packet yang menunjukkan aktivitas tersebut?
+- Berapakah acknowledge number (raw) pada packet yang menunjukkan aktivitas tersebut? 
+- Berapakah sequence number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
+- Berapakah acknowledge number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
+
+### Jawaban
+Karena aktivitas menggunakan protocol FTP dan salah satunya adalah mengunggah file maka dapat digunakan filter 'ftp.request.command == STOR' dimana STOR menandakan aktivitas untuk mengunggah.
